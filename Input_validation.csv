@@ -1,0 +1,108 @@
+﻿,,,,,,,,,"Project name: ISBN Checker validation
+Module name: ISBN 10 digit validation
+Date: APRIL 2026
+Prepared By: Bhagya T
+Testcase Counts:  12
+Environment: None
+",,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Test Id,,TestCase Name,,Test case Steps,,Test Input,,,Expected Result,,Actual Result,,Status,,Remarks
+,,,,,,,,,,,,,,,
+TC-001,,10- Digit valid ISBN,,"1. Open the postman
+2. Paste the service url
+3. select the http method post
+4. Inside the give the 10-digit number</sISBN>input</sISBN>
+5.click the send button
+6. check the response",,"Service url : https://webservices.daehosting.com/services/isbnservice.wso
+ISBN number : 0471958697
+",,,TRUE,,TRUE,,PASS,,200 OK
+,,,,,,,,,,,,,,,
+TC-002,,"10-Digit validation with ""X""",,"1. Open the postman
+2. Paste the service url
+3. select the http method post
+4. Inside the give the 10-digit number</sISBN>input</sISBN>
+5.click the send button
+6. check the response",,"Service url : https://webservices.daehosting.com/services/isbnservice.wso
+ISBN number : 047195869X",,,TRUE,,TRUE,,PASS,,
+,,,,,,,,,,,,,,,
+TC-003,,Empty Input,,"1. Open the postman
+2. Paste the service url
+3. select the http method post
+4. Inside the give the 10-digit number</sISBN>input</sISBN>
+5.click the send button
+6. check the response",,"Service url : https://webservices.daehosting.com/services/isbnservice.wso
+ISBN Number : "" """,,,FALSE,,FALSE,,PASS,,200 OK
+,,,,,,,,,,,,,,,
+TC-004,,Too Short input<9,,"1. Open the postman
+2. Paste the service url
+3. select the http method post
+4. Inside the give the 10-digit number</sISBN>input</sISBN>
+5.click the send button
+6. check the response",,"Service url : https://webservices.daehosting.com/services/isbnservice.wso
+ISBN Number : 047195869",,,FALSE,,FALSE,,PASS,,200 OK
+,,,,,,,,,,,,,,,
+TC-005,,Too Long input>10,,"1. Open the postman
+2. Paste the service url
+3. select the http method post
+4. Inside the give the 10-digit number</sISBN>input</sISBN>
+5.click the send button
+6. check the response",,"Service url : https://webservices.daehosting.com/services/isbnservice.wso
+ISBN Number : 04719586986",,,FALSE,,FALSE,,PASS,,200 OK
+,,,,,,,,,,,,,,,
+TC-006,,Only Alphabets,,"1. Open the postman
+2. Paste the service url
+3. select the http method post
+4. Inside the give the 10-digit number</sISBN>input</sISBN>
+5.click the send button
+6. check the response",,"Service url : https://webservices.daehosting.com/services/isbnservice.wso
+ISBN Number : abcdfdgejuy",,,FALSE,,FALSE,,PASS,,200 OK
+,,,,,,,,,,,,,,,
+TC-007,,Special Characters,,"1. Open the postman
+2. Paste the service url
+3. select the http method post
+4. Inside the give the 10-digit number</sISBN>input</sISBN>
+5.click the send button
+6. check the response",,"Service url : https://webservices.daehosting.com/services/isbnservice.wso
+ISBN Number : !@#$%^&*()_=",,,FALSE,,500 internal error,,FAIL,,"Defect /Bug- service crashes for special-character input instead of returning false.
+Defect Type : Functional / Input validation defect"
+,,,,,,,,,,,,,,,
+TC-008,,Chinese characters,,"1. Open the postman
+2. Paste the service url
+3. select the http method post
+4. Inside the give the 10-digit number</sISBN>input</sISBN>
+5.click the send button
+6. check the response",,"Service url : https://webservices.daehosting.com/services/isbnservice.wso
+ISBN Number : 中文测试",,,FALSE,,FALSE,,PASS,,200 OK
+,,,,,,,,,,,,,,,
+TC-009,, Numbers + alphabets,,"1. Open the postman
+2. Paste the service url
+3. select the http method post
+4. Inside the give the 10-digit number</sISBN>input</sISBN>
+5.click the send button
+6. check the response",,"Service url : https://webservices.daehosting.com/services/isbnservice.wso
+ISBN Number : 076swer46w",,,FALSE,,FALSE,,PASS,,200 OK
+,,,,,,,,,,,,,,,
+TC-010,,Spaces between ,,"1. Open the postman
+2. Paste the service url
+3. select the http method post
+4. Inside the give the 10-digit number</sISBN>input</sISBN>
+5.click the send button
+6. check the response",,"Service url : https://webservices.daehosting.com/services/isbnservice.wso
+ISBN Number : 1 2 3 4 5 6 7 8 9",,,FALSE,,FALSE,,PASS,,200 OK
+,,,,,,,,,,,,,,,
+TC-011,,Leading spaces,,"1. Open the postman
+2. Paste the service url
+3. select the http method post
+4. Inside the give the 10-digit number</sISBN>input</sISBN>
+5.click the send button
+6. check the response",,"Service url : https://webservices.daehosting.com/services/isbnservice.wso
+ISBN Number : "" 123456789""",,,FALSE,,FALSE,,PASS,,200 OK
+,,,,,,,,,,,,,,,
+TC - 012,,Trailing spaces,,"1. Open the postman
+2. Paste the service url
+3. select the http method post
+4. Inside the give the 10-digit number</sISBN>input</sISBN>
+5.click the send button
+6. check the response",,"Service Url : https://webservices.daehosting.com/services/isbnservice.wso
+ISBN Number : ""123456789 """,,,FALSE,,FALSE,,PASS,,200 OK
